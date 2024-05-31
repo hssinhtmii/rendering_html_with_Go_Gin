@@ -16,7 +16,7 @@ var page = jet.NewSet(
 	jet.InDevelopmentMode(),
 )
 
-func (server *Handler) Home(ctx *gin.Context) {
+func (hndlr *Handler) Home(ctx *gin.Context) {
 	err := RenderPage(ctx.Writer, "index.jet", nil)
 	if err != nil {
 		return
